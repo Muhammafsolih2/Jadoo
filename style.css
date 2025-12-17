@@ -52,7 +52,7 @@ a {
 
 .decore {
     position: absolute;
-    left: 768px;
+    right: 0;
     top: -10px;
     z-index: 1;
 }
@@ -170,6 +170,7 @@ a {
     display: flex;
     margin-top: 31px;
     align-items: center;
+    position: relative;
 }
 
 .icon11 {
@@ -177,8 +178,9 @@ a {
     border-radius: 13px;
     width: 47px;
     height: 48px;
-    top: 1090px;
+    top: 10px;
     margin-right: 21px;
+    position: relative;
 }
 
 .icons {
@@ -187,6 +189,7 @@ a {
     width: 47px;
     height: 48px;
     margin-right: 21px;
+    position: relative;
 }
 
 .icone {
@@ -194,26 +197,26 @@ a {
     border-radius: 13px;
     width: 47px;
     height: 48px;
-    top: 1090px;
     margin-right: 21px;
+    position: relative;
 }
 
 .icon11 svg {
     position: absolute;
-    left: 86px;
-    top: 2223px;
+    left: 13px;
+    top: 13px;
 }
 
 .icons svg {
     position: absolute;
-    left: 87px;
-    top: 2365px;
+    left: 13px;
+    top: 13px;
 }
 
 .icone svg {
     position: absolute;
-    left: 87px;
-    top: 2503px;
+    left: 13px;
+    top: 13px;
 }
 
 .about__card {
