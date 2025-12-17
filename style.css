@@ -230,10 +230,10 @@ a {
     z-index: 10;
 }
 
-.shadow {
+.shadow  {
     position: absolute;
     z-index: 1;
-    top: -150px;
+    top: -200px;
     right: -50px;
 }
 
@@ -337,6 +337,8 @@ a {
 
 .about__left {
     width: 40%;
+    z-index: 2;
+    position: relative;
 }
 
 .comment {
