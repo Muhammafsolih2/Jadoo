@@ -32,7 +32,8 @@
 @keyframes into {
     from {
         transform: translateY(-100px);
-    }    
+    }
+
     to {
         transform: translateY(0);
     }
@@ -82,6 +83,19 @@ a {
     font-size: 20px;
     color: #DF6951;
     font-weight: 700;
+    opacity: 0;
+    animation: fadeUp 1.2s ease-out 0.6s forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
 
 .right__title {
@@ -90,6 +104,15 @@ a {
     line-height: 89px;
     position: relative;
     z-index: 7;
+    opacity: 1;
+    animation: who 2s ease-out 1 forwards;
+}
+
+@keyframes who {
+    from {
+        opacity: 0;
+        transform: translateX(10px);
+    }
 }
 
 .tx {
@@ -152,6 +175,7 @@ a {
     from {
         transform: translateX(700px);
     }
+
     to {
         transform: translateX(10px);
     }
@@ -159,8 +183,15 @@ a {
 
 .plane {
     position: absolute;
-    left: 725px;
+    right: 550px;
     z-index: 2;
+    animation: wzuh 2s ease-in-out 1;
+}
+
+@keyframes wzuh {
+    from {
+        transform: translateY(800px);
+    }
 }
 
 .plane1 {
@@ -168,6 +199,13 @@ a {
     z-index: 2;
     left: 1200px;
     top: 200px;
+    animation: wzih 2s ease-in-out 1;
+}
+
+@keyframes wzih {
+    from {
+        transform: translateX(-1000px);
+    }
 }
 
 .about__desk {
@@ -261,7 +299,7 @@ a {
     z-index: 10;
 }
 
-.shadow  {
+.shadow {
     position: absolute;
     z-index: 1;
     top: -200px;
@@ -272,7 +310,8 @@ a {
 @keyframes op {
     from {
         opacity: 0;
-    }    
+    }
+
     to {
         opacity: 1;
     }
@@ -499,11 +538,14 @@ a {
     margin-top: 80px;
     gap: 80px;
     justify-content: center;
+    position: relative;
 }
 
 .services-card {
     text-align: center;
     background-color: #FFFF;
+    position: relative;
+    z-index: 3;
     border: 1px solid none;
     width: 220px;
     height: 227px;
@@ -516,17 +558,20 @@ a {
     font-size: 20px;
     color: #1E1D4C;
     margin-top: 30px;
+    z-index: 3;
 }
 
 .services-card p {
     font-size: 17px;
     color: #5E6282;
+    z-index: 3;
     margin-top: 15px;
 }
 
-.services-card img {
+.services-card img:nth-child(1) {
     width: 82px;
     height: 68px;
+    z-index: 3;
 }
 
 .services-card:hover {
@@ -555,8 +600,8 @@ a {
     position: absolute;
     right: 90px;
     top: 230px;
-    width:110px;     
-    z-index: -1;        
+    width: 110px;
+    z-index: -1;
 }
 
 .cards {
@@ -572,7 +617,7 @@ a {
     height: 450px;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: 0.25s;
 }
@@ -656,7 +701,7 @@ a {
     padding: 14px 18px;
     border-radius: 12px;
     width: 330px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 .mail-icon {
@@ -680,13 +725,17 @@ a {
     color: white;
     font-size: 14px;
     cursor: pointer;
+
+    &:focus {
+        background: green;
+    }
 }
 
 .telegram-icon {
     position: absolute;
     right: 9%;
     top: -20px;
-    background: #5a65ff;       
+    background: #5a65ff;
     color: white;
     font-size: 22px;
     padding: 18px;
@@ -703,7 +752,7 @@ a {
     width: 250px;
     opacity: 0.10;
     z-index: 1;
-    transform: rotate(90deg);  
+    transform: rotate(90deg);
     transform-origin: center;
 
 }
@@ -717,7 +766,7 @@ a {
     z-index: 1;
 }
 
-.decor-buttom{
+.decor-buttom {
     position: absolute;
     width: 150px;
     right: 2%;
@@ -735,6 +784,11 @@ a {
 .footer-left h1 {
     font-size: 34px;
     color: #3b3a58;
+}
+
+.footer-left h2 {
+    font-size: 44px;
+    color: #181E4B;
 }
 
 .footer-left p {
@@ -776,23 +830,21 @@ a {
     font-size: 17px;
 }
 
-.gradient{
-     width: 38px;
+.gradient {
+    width: 38px;
     height: 38px;
     border-radius: 50%;
-        background: linear-gradient(
-        135deg,
-        #B8D2F1,
-        #F289AA,
-        #C68BF0,
-        #D164DA,
-        #C963E8,
-        #BFC2E8,
-        #FFC999,
-        #D0D8C9,
-        #BAD0F1,
-        #CED8CB
-    );
+    background: linear-gradient(135deg,
+            #B8D2F1,
+            #F289AA,
+            #C68BF0,
+            #D164DA,
+            #C963E8,
+            #BFC2E8,
+            #FFC999,
+            #D0D8C9,
+            #BAD0F1,
+            #CED8CB);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -814,4 +866,38 @@ a {
     text-align: center;
     color: #6f6f6f;
     margin-bottom: 40px;
+}
+
+.spon__img {
+    width: 200px;
+    height: 100px;
+    padding: -150px 0;
+    transition: 0.5s;
+    filter: grayscale(100%);
+    border-radius: 20px;
+
+    &:hover {
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        filter: grayscale(0);
+    }
+}
+
+.spon__card {
+    gap: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.small {
+    height: 50px;
+}
+
+.service__img {
+    position: absolute;
+    top: 150px;
+    left: 65px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
 }
