@@ -521,6 +521,7 @@ a {
 
 .services-title {
     text-align: center;
+    position: relative;
 }
 
 .services-title h2 {
@@ -898,6 +899,24 @@ a {
     left: 65px;
     z-index: 1;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: 0.3s;
     pointer-events: none;
+    visibility: hidden;
+
+    &:nth-child(4) {
+        left: 365px;
+    }
+    &:nth-child(8) {
+        left: 965px;
+    }
+    &:nth-child(6) {
+        left: 665px;
+    }
+}
+
+.services__img {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    rotate: 270deg;
 }

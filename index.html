@@ -75,6 +75,7 @@
                 <div class="services-title">
                     <h2>CATEGORY</h2>
                     <h3>We Offer Best Services</h3>
+                    <img src="./Group 5.png" alt="Decore" class="services__img">
                 </div>
                 <div class="services-cards">
                     <div class="services-card">
@@ -82,7 +83,7 @@
                         <h3>Calculated Weather </h3>
                         <p>Built Wicket longer admire do barton vanity itself do in it.</p>
                     </div>
-                    <img class="service__img" src="./Rectangle 157.png" alt="Decore">
+                    <img src="./Rectangle 157.png" alt="Decore" class="service__img">
                     <div class="services-card">
                         <img style="width: 140px; height: 100px;" src="./Group 51.png" alt="Service 2">
                         <h3>Best Flights</h3>
@@ -383,8 +384,8 @@
                 <p class="app-title">Discover our app</p>
 
                 <div class="app-buttons">
-                    <img src="google.png" alt="">
-                    <img src="apple.png" alt="">
+                    <img src="./Google Play.png" alt="">
+                    <img src="./Play Store.png" alt="">
                 </div>
             </div>
         </footer>
@@ -392,17 +393,19 @@
         <p class="copyright">All rights reserved@jadoo.co</p>
     </div>
     <script>
-        const card = document.querySelector('.service-card');
-        const img = document.querySelector('.service__img');
+        const serviceCards = document.querySelectorAll('.services-card');
+        const serviceImgs = document.querySelectorAll('.service__img');
 
-        card.addEventListener('mouseenter', () => {
-            img.style.opacity = '1';
+        serviceCards.forEach((card, index) => {
+            card.addEventListener('mouseenter', () => {
+                serviceImgs[index].style.opacity = '1';
+                serviceImgs[index].style.visibility = 'visible';
+            });
+            card.addEventListener('mouseleave', () => {
+                serviceImgs[index].style.opacity = '0';
+                serviceImgs[index].style.visibility = 'hidden';
+            });
         });
-
-        card.addEventListener('mouseleave', () => {
-            img.style.opacity = '0';
-        });
-
     </script>
 </body>
 
