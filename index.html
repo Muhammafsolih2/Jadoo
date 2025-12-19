@@ -290,9 +290,8 @@
                         <span></span>
                     </div>
                 </div>
-                <div class="testim">
-
-                    <div class="testim__card active">
+                <div class="testim" id="testim">
+                    <div class="testim__card active" id="card1">
                         <img src="./Image.png" class="testim__img" alt="">
                         <p class="testim__text">
                             “On the Windows talking painted pasture yet its express parties use.
@@ -302,11 +301,15 @@
                         <span class="testim__pos">Lahore, Pakistan</span>
                     </div>
 
-                    <div class="testim__card abso">
-                        <h3 class="testim__name">Chris Thomas</h3>
+                    <div class="testim__card abso" id="card2">
+                        <img src="https://people.com/thmb/Gmq4RSmucu7WsObTWE7XT0UC6xE=/4000x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(999x0:1001x2)/jeffrey-epstein-d64a6dc371e74ff4ad61994252905624.jpg"
+                            class="testim__img" alt="">
+                        <p class="testim__text">
+                            “Hi it is secret i say Umid gay no sorry Unid the good boy”
+                        </p>
+                        <h3 class="testim__name">Jeffrey Epstain</h3>
                         <span class="testim__pos">CEO of Red Button</span>
                     </div>
-
                 </div>
             </div>
         </main>
@@ -405,6 +408,12 @@
                 serviceImgs[index].style.opacity = '0';
                 serviceImgs[index].style.visibility = 'hidden';
             });
+        });
+
+        const testim = document.getElementById('testim');
+
+        testim.addEventListener('click', () => {
+            testim.classList.toggle('swap');
         });
     </script>
 </body>
